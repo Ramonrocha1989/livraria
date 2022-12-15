@@ -1,0 +1,19 @@
+<h2>{{titulo}}</h2>
+<label>Pesquisa</label>
+<input type="text" [(ngModel)]="livroPesquisado">
+<br/>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Nome do Autor</th>
+    <th>Nacionalidade</th>
+    <th>Ação</th>
+  </tr>
+ <tr *ngFor="let aut of autor">
+  <th>{{aut._id}}</th>
+  <th>{{aut.nome}}</th>
+  <th>{{aut.nacionalidade}}</th>
+  <th><a routerLink="/editaAutores/{{aut._id}}"> Editar</a></th>
+  <td><a routerLink="/autor" (click)="dele(aut._id)">Deletar</a></td>
+ </tr>
+</table>
