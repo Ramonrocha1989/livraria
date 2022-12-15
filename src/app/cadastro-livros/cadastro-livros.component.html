@@ -1,0 +1,28 @@
+<h2>Formulário de Livros</h2>
+
+<!-- <label for="id">Id:</label>
+<input type="number" [(ngModel)]="livro._id"  id="id">
+<br /> -->
+
+<label for="titulo">Titulo:</label>
+<input [(ngModel)]= "livro.titulo" id="titulo">
+<br />
+
+<label for="autor">Autor:</label>
+<input [(ngModel)]= "livro.autor" id="autor">
+<br />
+
+<label for="editora">Editora:</label>
+<input [(ngModel)]= "livro.editora" id="editora">
+<br />
+
+<label for="numeroPaginas">Páginas:</label>
+<input type="number" [(ngModel)]= "livro.numeroPaginas" id="numeroPaginas">
+<br />
+
+<button (click)="salvar()">{{botaoAcao}}</button><br/>
+<button (click)="cancelar()">CANCELAR</button>
+<br />
+
+<h4>{{mensagem}}</h4>
+<br />
